@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    background-color: #202020;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: rgb(24, 24, 24);
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 5px rgb(15, 15, 15), -3px -3px 5px rgb(44, 44, 44);
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.block:hover {
+    background: #1d1d1d;
+}
+
+.base {
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.winner-board {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    background: rgba(24, 24, 24, 0.651);
+    box-shadow: 3px 3px 5px rgb(15, 15, 15);
+    backdrop-filter: blur(6px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.winner-board::before {
+    content: '';
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    background: rgba(24, 24, 24, 0.651);
+    backdrop-filter: blur(4px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    text-shadow: 0px 5px 2px rgb(15, 15, 15);
+}
+
+.winner {
+    font-size: 90px;
+    color: white;
+    text-align: center;
+    padding-top: 0px;
+    text-shadow: 0px 0px 10px rgb(168, 230, 255);
+}
+
+.choice-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+
+
+/* Start home Menu Styling */
+
+
+.btn {
+    cursor: pointer;
+}
+
+.home-board {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    background-color: #1d1d1d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 5;
+}
+
+.game-name {
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px black, -2px -2px 2px rgb(107, 107, 107);
+    margin-bottom: 50px;
+}
+
+.mode,
+.home-button,
+.button {
+    font-size: 20px;
+    font-weight: bold;
+    background: #ffffff;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 0px 5px 0px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 6px 6px 10px rgb(17, 17, 17);
+    transition: 250ms;
+}
+
+.home-button,
+.button {
+    font-size: 18px;
+    width: 120px;
+    font-weight: bold;
+    background: #ffffff;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+    padding: 0px 10px 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 6px 6px 10px rgb(17, 17, 17);
+    transition: 250ms;
+}
+
+.one:hover,
+.two:hover,
+.home-button:hover,
+.button:hover {
+    background: #00ccff;
+    box-shadow: 0px 0px 10px #00ccff;
+    color: white;
+}
+
+.one:active,
+.two:active,
+.home-button:active,
+.button:active {
+    background: #005266;
+}
+
+/* Double player Intstructions board styles */
+
+.dp-ints {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    color: white;
+    background-color: #1d1d1d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin-right: 15px;
+}
+
+/* Difficult level board styles */
+
+.difficult-board,
+.play-order-board {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    background-color: #1d1d1d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    background: #ffffff;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 0px 5px 0px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 6px 6px 10px rgb(17, 17, 17);
+    transition: 250ms;
+}
+
+h4:hover {
+    background: #00ccff;
+    box-shadow: 0px 0px 10px #00ccff;
+    color: white;
+    width: 180px;
+}
+
+h4:active {
+    background: #005266;
+}
+
+.board-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+/* loading Container */
+
+.loading-container {
+    overflow: hidden;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #242424;
+    z-index: 10;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.t1,
+.t2,
+.t3 {
+    align-items: baseline;
+    display: flex;
+    position: absolute;
+}
+
+.Ct1,
+.Ct2,
+.Ct3 {
+
+    color: #00ccff;
+    font-size: 69px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.t1 {
+    right: 230px;
+    top: -85px;
+}
+
+.t2 {
+    right: 125px;
+    bottom: -80px;
+}
+
+.t3 {
+    right: 10px;
+    top: -85px;
+}
+
+.st1,
+.st2,
+.st3 {
+    width: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
